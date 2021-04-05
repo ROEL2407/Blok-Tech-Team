@@ -86,7 +86,7 @@ app.get('/match', async (req, res) => {
 
 app.get('/chat_home', async (req, res) => {
   var profielChat = await profielmod.find().lean();
-  res.render('chat_home', {
+  res.render('matches', {
     profiel: profielChat
   })
   console.log (profielChat);

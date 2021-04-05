@@ -1,11 +1,10 @@
-    <section id="chat">
-        <section id="result">
-            <p>Jij antwoordde {{ lastItem }}</p>
-            <p>Maaike antwoordde {{ lastItem }}</p>
-        </section>
-        <section class="chat_msg" id="msg1"><p>Hey! hoe gaat het?</p></section>
-        <section class="chat_msg" id="msg2"><p>Goed! en met jou?</p></section>
+
+    <section id="result">
+        <p>Jij antwoordde {{ lastItem }}</p>
+        <p>Maaike antwoordde {{ lastItem }}</p>
     </section>
+    <section class="chat_msg" id="msg1"><p>Hey! hoe gaat het?</p></section>
+    <section class="chat_msg" id="msg2"><p>Goed! en met jou?</p></section>
     <section id="popUpWrapper">
         <section id="popUp">
             <a href="/chat"><i class="fa fa-chevron-left"></i>
@@ -14,7 +13,7 @@
             <section id="questions">
                 <p>Kies een vraag om samen met je match te beantwoorden:</p>
                 {{#each randVraag }}
-                <section class="quest" id="vr_id{{this.id}}">
+                <section class="quest">
                     <p>{{ this.vraag }}</p>
                 </section>
                 {{/each}}
@@ -23,10 +22,10 @@
                 {{#each randVraag }}
                     <section class="answers invisible">
                         <h3>{{ this.vraag }}</h3>
-                        <form action="" method="POST">
+                        <form method="POST">
                             <input type="radio" name="answer" id="ans1" value="{{this.ant1}}"><label>&nbsp;{{this.ant1}}</label>
                             <input type="radio" name="answer" id="ans2" value="{{this.ant2}}"><label>&nbsp;{{this.ant2}}</label>
-                            <input type="submit" value="Confirm answer" id="sendAnswer">
+                            <input type="submit" value="bevestigen" id="sendAnswer">
                         </form>
                     </section>
                 {{/each}}
