@@ -89,7 +89,6 @@ app.get('/chat_home', async (req, res) => {
   res.render('matches', {
     profiel: profielChat
   })
-  console.log (profielChat);
 });
 
 app.get('/', async (req, res) => {
